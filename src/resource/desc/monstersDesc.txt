@@ -1,0 +1,84 @@
+Goblin
+Goblins are small, pesky creatures that rely on sheer numbers to overpower their foes. They have no special abilities. <br> DIFFICULTY: <span style=' color: yellow;'>✮<b></span><span style=' color: gray;'>✮✮✮✮</b></span>
+50
+10
+5
+15
+ has KICKED you in the face for 
+ has pulled out a dagger and STABBED your big toe for 
+ has clenched it's fist and PUNCHED you in the stomach for 
+ smiled menacingly and SPAT in your face. Dealing 
+
+
+Skeleton
+Skeletons are reanimated undead, driven by malevolent intent. They have no unique abilities. <br> DIFFICULTY: <span style=' color: yellow;'>✮<b></span><span style=' color: gray;'>✮✮✮✮</b></span>
+60
+12
+3
+15
+ SWUNG its hard bony fists at you, grazing your arm with a bone-chilling strike for 
+ THREW its own leg at you. Hitting you right on the head, dealing 
+ lunged forward, BONKING you at the head with its bony arm, inflicting 
+ did its bone-rattling SCREECH, causing 
+
+
+Witch
+Witches possess magical abilities, including the power to cast spells. Their main ability is to cast "Fireball," a potent fire-based magical attack. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮<b></span><span style=' color: gray;'>✮✮✮</b></span>
+150
+24
+30
+20
+ cackled ominously, CASTING a dark hex that drained 
+ with a wicked laugh, the witch's CURSE weakened you, sapping 
+ twisted incantation struck you with a surge of DARK ENERGY, dealing 
+ chilling whisper accompanied the witch's spell, SIPHONING 
+
+
+Ogre
+Ogres are hulking, brutish creatures known for their raw strength and how they are like onions. They have no unique abilities, but also want you to get out of their swamp. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮<b></span><span style=' color: gray;'>✮✮</b></span>
+250
+30
+40
+20
+ swung his green fist, delivering a HEAVY BLOW to your leg for 
+ suddenly yelled "GET... OUT... OF ME SWAMP!", the ogre RAMMED its shoulder into you, causing 
+ charged, delivering a forceful KICK to your midsection, dealing 
+ thought of his love Fiona, before running towards you and KICKING you in the face for 
+
+
+Harpy
+Harpies are agile and cunning. They possess two abilities: "Talon Strike," a physical attack, and "Wind Gust," a magical attack that can disrupt opponents. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮<b></span><span style=' color: gray;'>✮✮</b></span>
+200
+55
+35
+20
+ has swooped down, CLAWING your shoulder, leaving a trail of scratches for 
+ with a piercing screech, the harpy's talons GRAZED your arm, causing a stinging pain for 
+ swift as the wind, the harpy SLASHED your back with its razor-sharp claws for 
+ dived in a frenzied assault, RAKING its talons across your chest. 
+
+
+Gnoll
+Gnolls are fierce humanoid creatures, combining the features of hyenas and humans. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮✮<b></span><span style=' color: gray;'>✮</b></span>
+450
+100
+85
+35
+ pounced from the shadows, BITING your hand, causing 
+ with swift ambush and CLAWED at your leg, dealing 
+ lunged with ferocity, SINKING their teeth into your shoulder for  
+ launched a surprise attack, SCRATCHED your back and inflicting 
+
+
+Dragon
+Dragons are a colossal, reptilian creature with powerful wings, sharp claws, and the ability to breathe fire. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮✮✮<b></span><span style=' color: gray;'></b></span>
+2500
+250
+180
+3
+ breathed a searing blaze, SCORCHING you with intense flames for 
+ with a mighty SWIPE, the dragon's claws left deep gashes in your side for  
+ unleashed a thunderous roar, KNOCKING you back and dealing 
+ with a cascade of dragonfire enveloped you, BURNING fiercely and causing 
+
+

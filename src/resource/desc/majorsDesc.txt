@@ -1,0 +1,96 @@
+se
+Software Engineering
+This Major utilizes the power of Creation and Logic to defend against powerful attacks and to counterattack at the right moment.
+Has High HP and decent attack.
+Spells:
+1. Algorithmic Alchemy (requires 30 credits) - HEALING SPELL
+2. Defense Deployment (requires 60 credits) - DEFENSE SPELL
+3. Debug Swarm (requires 90 credits) - ATTACK SPELL
+stats
+34
+8
+10
+5
+1
+2
+Algorithmic Alchemy
+Defense Deployment
+Debug Swarm
+
+ai
+Artificial Intelligence
+This Major uses the power of Machine Learning and Algorithms to predict the enemy's weaknesses and actions.
+Has high attack but low defense.
+Spells:
+1. Algorithmic Efficiency (requires 30 credits) - BUFF SPELL
+2. Machine Learning (requires 60 credits) - DEBUFF SPELL
+3. Shoot-GPT(requires 90 credits) - ATTACK SPELL
+stats
+30
+12
+8
+3
+3
+1
+Algorithmic Efficiency
+Machine Learning
+Shoot-GPT
+
+
+csn
+Computer System & Network
+Specializes at being durable while slowly damaging the enemy.
+has high defense and hp.
+Spells:
+1. Fire Wall (requires 30 credits) - DEFENSE SPELL
+2. System Repair (requires 60 credits) - HEALING SPELL
+3. World Wide Web (requires 90 credits) - DEBUFF SPELL
+stats
+36
+12
+5
+5
+1
+2
+Fire Wall
+System Repair
+World Wide Web
+
+
+mmc
+Multimedia Computing
+Uses the versatile power of audio, visuals, and the like to accomplish incredible feats.
+has good balance of attack, defense, and hp.
+Spells:
+1. Audiovisual Blast (requires 30 credits) - ATTACK SPELL
+2. Chill LoFi Playlist (requires 60 credits) - HEALING SPELL
+3. Audiovisual Mastery (requires 90 credits) - DEBUFF SPELL
+stats
+22
+11
+11
+5
+2
+2
+Audiovisual Blast
+Chill LoFi Playlist
+Audiovisual Mastery
+
+is
+Information Systems
+Has a mastery of Systems and Hierarchies. Specializes in weakening the enemy while strengthening themself.
+has low hp but high attack and defense.
+Spells:
+1. Hierarchical Domain (requires 30 credits) - DEBUFF SPELL
+2. Information Overload (requires 60 credits) - ATTACK SPELL
+3. Domain Expansion (requires 90 credits) - BUFF SPELL
+stats
+28
+10
+11
+2
+3
+3
+Hierarchical Domain
+Information Overload
+Domain Expansion

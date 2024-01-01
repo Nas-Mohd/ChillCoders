@@ -1,0 +1,54 @@
+Instuctions:
+Write .txt file name it "majorsDesc.txt"
+Separate 5 parts for the five majors.
+Have each part start with identifier (ai, mmc, se, is, csn)
+Then name of major Like "Artificial Intelligence"
+then write a description and Include the spells in the description
+After description have a line that just says stats.
+After stats line, set the stats for each major. HP => ATTACK = > DEFENSE IN THIS ORDER
+The stats should equal to 35 total, and HP should be multiplied by 2 when setting the stats.
+FOR EXAMPLE, AI = 30 HP + 12 ATK + 8 DEF = 15 + 12 + 8 = 35 stat points
+After setting stats, set the SCALING for each stat. HPSCALE => ATKSCALE=> DEFSCALE
+The scaling should equal to 7 total and HPSCALE should be multiplied by 2 when setting.
+FOR EXAMPLE, AI = 2 HPSCALE + 5 ATKSCALE + 1 DEFSCALE = 1 + 5 + 2 = 7 scaling.
+After setting scaling list down the 3 spell names for the major then done and go to the next major.
+
+
+ai (identifier)
+Artificial Intelligence
+This Major uses the power of Machine Learning and Algorithms to predict the enemy's weaknesses and actions.
+Has high attack but low defense
+Spells:
+1. Cybernetic Spellcraft (requires 5 credits)
+2. Circuit Enchantment(requires 10 credits)
+3. Quantum Divination (requires 15 credits)
+stats
+30 (HP) /2
+12 (Attack)
+8 (Def)
+2 (HPSCALE) /2
+5 (ATKSCALE)
+1 (DEFSCALE)
+Cybernetic Spellcraft (SPELLNAMES)
+Circuit Enchantment
+Quantum Divination
+csn
+Computer Systems & Networks
+Specializes at building computers or something
+has high defense
+also Kill me right now
+Speels:
+1. Cascade Charm (requires 5 credits)
+2. Etherweb Shield (requires 15 credits)
+3. Firewall Enchantment (requires 30 credits)
+stats
+36
+9
+8
+2
+2
+4
+Cascade Charm
+Etherweb Shield
+Firewall Enchantment
+

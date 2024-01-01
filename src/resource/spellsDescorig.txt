@@ -1,0 +1,120 @@
+Artificial Intelligence
+
+Cybernetic Spellcraft
+Engulfs the enemy in an electrical surge, disrupting their abilities momentarily by 20%
+status
+0.8
+5
+4
+
+Circuit Enchantment
+Constructs a dynamic arcane barrier, blocking incoming attacks
+defend
+1.0
+15
+5
+
+Quantum Divination
+Channels quantum energy to distort reality, inflicting 200% of your attack as attack
+attack
+2.0
+30
+6
+
+Computer System & Network
+
+Cascade Charm
+Enchants the target with a cascading charm, reducing their combat effectiveness by 20%
+status
+0.8
+5
+4
+
+Etherweb Shield
+Creates an impenetrable ether web shield, blocking incoming attack
+defend
+1.0
+15
+5
+
+Firewall Enchantment
+Manifests a roaring firewall, dealing 200% of your attack as attack
+attack
+2.0
+30
+6
+
+------------------------------------------------------------------------------------------------------------------------------------
+Software Engineering
+
+Debugging Divination
+Harnesses ethereal energies to diminish the enemy's combat effectiveness by 20%
+status
+0.8
+5
+4
+
+Algorithmic Alchemy
+Creates an algorithmic synergy, evading attacks from the enemy
+defend
+1.0
+15
+5
+
+Logic Weave
+Harmonizes intricate magical energy, inflicting 200% of your attack as heavy attack
+attack
+2.0
+30
+6
+
+------------------------------------------------------------------------------------------------------------------------------------
+Multimedia Computing
+
+Audiovisual Alchemy
+Conjures a dazzling array of audio and visual elements, declining the target's combat power by 20%
+status
+0.8
+5
+4
+
+Multi Realm Transmute
+Manipulates the fabric of reality, blocking the enemy's attack
+defend
+1.0
+15
+5
+
+Symphony Spellcraft
+Unleashes a symphony of magical resonance, dealing 200% of your attack as attack
+attack
+2.0
+30
+6
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+Information Systems
+
+Datawave Divination
+Channels data waves to evade attacks, weakening enemy defenses by 20%
+status
+0.8
+5
+4
+
+Analytical Alchemy
+Unleashes a calculated surge, evading incoming attacks
+defend
+1.0
+15
+5
+
+Prediction Enchantment
+Predicts and directs an onslaught, dealing 200% of your attack as targeted attack
+attack
+2.0
+30
+6

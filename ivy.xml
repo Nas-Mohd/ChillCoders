@@ -1,0 +1,8 @@
+<ivy-module version="2.0">
+    <info organisation="your-organization" module="GUI Prototype" />
+
+    <dependencies>
+        <dependency org="org.xerial" name="sqlite-jdbc" rev="3.44.1.0" />
+        <!-- Add other dependencies if needed -->
+    </dependencies>
+</ivy-module>
