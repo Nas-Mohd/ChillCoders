@@ -10,7 +10,7 @@ import java.util.logging.*;
 
 public class SaveDB {
 
-    private static final String URL = "jdbc:sqlite:save.db";
+    private static final String URL = "jdbc:sqlite:src/resource/database/save.db";
     public static String[][] loadFile = new String[5][8];
 
     static {
