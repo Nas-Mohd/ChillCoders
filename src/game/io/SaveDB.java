@@ -261,7 +261,7 @@ public class SaveDB {
                     String[] row = {
                         "<span style='color:lime;'>"+Integer.toString(count) + "</span>",
                         playerName,
-                        chosenMajor,
+                        chosenMajor.toUpperCase(),
                         Integer.toString(credits),
                         Integer.toString(monstersKilled) + " / 7"
                     };
