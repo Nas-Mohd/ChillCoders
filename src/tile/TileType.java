@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 
 /**
  *
- * @author ikmal
+ * @author ChillCoders Group
  */
 class Tiletype {
 

@@ -18,7 +18,7 @@ import game.ui.Map;
 
 /**
  *
- * @author ikmal
+ * @author ChillCoders Group
  */
 public class Tile {
 
