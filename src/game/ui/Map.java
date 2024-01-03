@@ -40,7 +40,6 @@ public class Map extends JPanel implements Runnable {
 
     public Map() {
         tilemap = Reader.readMapFile(tilerow, tilecol);
-        System.out.println("Project");
         this.setFocusable(true);//can focus to receive input
         this.setDoubleBuffered(true);
         this.setBounds(0,0,800,800);
@@ -51,7 +50,6 @@ public class Map extends JPanel implements Runnable {
     }//end Map constructor
 
     public void thread() {
-        System.out.println("thread");
         t1 = new Thread(this);//pass Map class to thread constructor
         t1.start();
     }//end thread

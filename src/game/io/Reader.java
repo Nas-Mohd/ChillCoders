@@ -34,7 +34,7 @@ public class Reader {
             monsterDesc[8] = reader.nextLine(); // monster attack dialogue
             reader.close();
             } catch (FileNotFoundException e) {
-            System.out.println("File was not found"); 
+            e.printStackTrace();
             }
 
         
@@ -65,7 +65,7 @@ public class Reader {
             majorDesc[10] = reader.nextLine(); // major SpellName 3
             reader.close();
             } catch (FileNotFoundException e) {
-            System.out.println("File was not found"); 
+            e.printStackTrace();
             }
         return majorDesc;
     }

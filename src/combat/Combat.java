@@ -11,8 +11,6 @@ import game.ui.Print;
 import game.io.SaveDB;
 import java.sql.SQLException;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -75,7 +73,6 @@ public class Combat {
     }
     
     public static void startCombat() {
-        System.out.println(enemy.hp);
         if (player.hp > 0 && enemy.hp > 0)
         Print.monsterStartCombat(enemy);
         else
@@ -92,7 +89,7 @@ public class Combat {
                     try {
                         SaveDB.deletePlayerAndMonsters(Game.p.id);
                     } catch (SQLException ex) {
-                        System.out.println("some error lmao");
+                        System.out.println("SQL Exception");
                     }
                     Print.epilogue0(enemy);
                     
@@ -232,7 +229,6 @@ public class Combat {
     }
     
     public static void castSpell(Spells spell) {
-        System.out.println("SPELL TYPE: " + spell.type);
         switch (spell.type) {
             case "status" -> {
                 Game.setProgress("Status Spell");
@@ -248,7 +244,6 @@ public class Combat {
                 Print.displayEffects((int)(spell.multiplier));
             }
             case "attack" -> {
-                System.out.println("heard attack");
                 Game.setProgress("Attack Spell");
                 spell.countdown = spell.cd;
                 int dmg = (int) (player.attack * spell.multiplier);

@@ -4,7 +4,6 @@
  */
 package game.engine;
 
-import game.engine.CommandLineInputHandler;
 import game.ui.Map;
 import game.ui.Print;
 import game.io.SaveDB;
@@ -123,7 +122,6 @@ public class Game {
         titleGameText.setLineWrap(true);
         titleGameText.setWrapStyleWord(true);
         titleGameText.setVisible(true);
-        System.out.println("Initialized titleGameText");
         
         
         

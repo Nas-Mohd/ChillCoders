@@ -8,7 +8,6 @@ import entity.Monster;
 import game.engine.Game;
 import game.io.Reader;
 import game.ui.Map;
-import game.ui.Print;
 import game.io.SaveDB;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -66,7 +65,7 @@ public final class Goblin extends Monster{
                     map.tilemap[Y][X] = 2;
                 hasSpawned = true;
             } catch (SQLException ex) {
-                Logger.getLogger(Goblin.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("SQL Exception");
             }
         } else {
             while (!hasSpawned) {

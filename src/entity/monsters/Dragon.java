@@ -9,14 +9,11 @@ import entity.Monster;
 import game.engine.Game;
 import game.io.Reader;
 import game.ui.Map;
-import game.ui.Print;
 import game.io.SaveDB;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
@@ -67,7 +64,7 @@ public class Dragon extends Monster {
                     map.tilemap[Y][X] = 8;
                 hasSpawned = true;
             } catch (SQLException ex) {
-                System.out.println("hi");
+                System.out.println("SQL Exception");
             }
              
              

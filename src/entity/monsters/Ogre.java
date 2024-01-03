@@ -7,14 +7,11 @@ import entity.Monster;
 import game.engine.Game;
 import game.io.Reader;
 import game.ui.Map;
-import game.ui.Print;
 import game.io.SaveDB;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
@@ -47,7 +44,7 @@ public class Ogre extends Monster{
         try {
             img = ImageIO.read(getClass().getResourceAsStream("/resource/images/ogre.png"));
         } catch (IOException e) {
-            System.out.println("Problem with image - ogre");
+            System.out.println("Problem with image");
         }
     }
     public void ogreSpawn(){
@@ -65,7 +62,7 @@ public class Ogre extends Monster{
                     map.tilemap[Y][X] = 6;
                 hasSpawned = true;
             } catch (SQLException ex) {
-                System.out.println("oopsies");
+                System.out.println("SQL Exception");
             }
              
              

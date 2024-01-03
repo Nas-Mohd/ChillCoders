@@ -13,7 +13,6 @@ import javax.imageio.ImageIO;
 import game.engine.Keypress;
 import game.ui.Print;
 import game.ui.Map;
-import game.io.SaveDB;
 
 /**
  *
@@ -79,18 +78,15 @@ public class Player extends Character {
         if (isColliding(game.tilemap)) {
             // If a collision occurs, revert to the previous position
                         int monster = isCollidingWithMonster(game.tilemap);
-                        System.out.println(monster);
             
                 x = prevX;
                 y = prevY;
                 
                 if ( monster > 0) {
                     
-                    System.out.println("monster" + monster);
                     keypress.stopMovement();
                     Combat.initiateCombat(monster, this);
                     monster = 0;
-                    System.out.println(monster);
             }
             
             
@@ -185,7 +181,6 @@ public class Player extends Character {
             attack = chosenMajor.attack + (chosenMajor.atkScaling * credits);
             defense = chosenMajor.defense + (chosenMajor.defScaling*credits);
         } else{
-            System.out.println("Has Chosen major");
             chosenMajor = new Major(m);
             hp = chosenMajor.hp;
             attack = chosenMajor.attack;

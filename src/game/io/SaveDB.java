@@ -18,45 +18,32 @@ public class SaveDB {
         Logger.getLogger("").setLevel(Level.OFF);
     }
 
-    public static void main(String[] args) {
-        try {
-            System.out.println(getSaveInfo());
-        } catch (SQLException ex) {
-            Logger.getLogger(SaveDB.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
 
     public static void saveGame() {
         try {
             Class.forName("org.sqlite.JDBC");
-            System.out.println("1");
 
             try ( Connection connection = DriverManager.getConnection(URL)) {
-                System.out.println("3");
 
                 // Check the current number of saves
                 int currentSaveCount = getCurrentSaveCount(connection);
-                System.out.println("4");
 
                 // Check if the maximum save limit has been reached
                 if (currentSaveCount >= 5) {
                     // Delete the oldest save file (you need to implement this logic)
-                    System.out.println("a");
                     deleteOldestSave(connection);
                 }
 
                 // Proceed with the save operation
                 
                 savePlayer(connection);
-                System.out.println("5");
                 saveMonsters(connection);
-                System.out.println("6");
 
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         } catch (ClassNotFoundException ex) {
-            System.out.println("oop");
+            ex.printStackTrace();
         }
     }
 

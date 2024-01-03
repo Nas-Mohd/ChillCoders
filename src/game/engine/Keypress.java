@@ -8,9 +8,7 @@ package game.engine;
  *
  * @author ikmal
  */
-import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*;
 
 //detect keypress to move the character
 public class Keypress implements KeyListener {

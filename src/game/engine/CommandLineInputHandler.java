@@ -12,8 +12,6 @@ import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.text.BadLocationException;
@@ -59,14 +57,12 @@ class CommandLineInputHandler implements KeyListener {
         
         if (e.getKeyCode() == KeyEvent.VK_ENTER && e.getSource() == window.commandLine && window.commandLine.isFocusOwner()) {
             press++;
-            System.out.println(Game.progress + " - PROGRESS BEFORE GETTING USER INPUT");
             
             if (!Game.progress.equals("Map")) {
                 getRecentInput();
             }
             
             
-            System.out.println(Game.progress + " - PROGRESS AFTER GETTING USER INPUT AND CHECKING");
         
             window.commandLine.setText("> ");
             window.commandLine.setCaretPosition(window.commandLine.getText().length());
@@ -84,18 +80,16 @@ class CommandLineInputHandler implements KeyListener {
         try {
             int length = document.getLength();
             recentInput = document.getText(2, length-3);
-            System.out.println(recentInput + " - oop?");
 
                 checkInput();
         } catch (BadLocationException e) {
-            System.out.println("oopsies");
+            System.out.println("Error getRecentInput");
         }
         
         
     }
     
     public void checkInput(){
-        System.out.println(Game.progress + " - STRING USED FOR CHECKING");
         switch (Game.progress){
             case "Start Game" -> window.titleToMenuScreen();
             case "Menu Screen" -> {
@@ -162,12 +156,10 @@ class CommandLineInputHandler implements KeyListener {
             }
             case "Choosing" -> {
                 if (recentInput.equals("y")){
-                    System.out.println("hi");
                     Game.setProgress("Choosing Name");
                     window.chooseName();
                 }
                 else if (recentInput.equals("")){
-                    System.out.println("bye");
                     Game.setProgress("Create Character");
                     Print.showMajors();
                 }

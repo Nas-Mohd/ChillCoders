@@ -7,14 +7,11 @@ import entity.Monster;
 import game.engine.Game;
 import game.io.Reader;
 import game.ui.Map;
-import game.ui.Print;
 import game.io.SaveDB;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
@@ -65,7 +62,7 @@ public class Skeleton extends Monster{
                     map.tilemap[Y][X] = 4;
                 hasSpawned = true;
             } catch (SQLException ex) {
-                System.out.println("oopsies");
+                System.out.println("SQL Exception");
             }
              
              

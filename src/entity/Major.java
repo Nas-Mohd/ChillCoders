@@ -5,7 +5,6 @@
 package entity;
 
 import combat.Spells;
-import game.ui.Print;
 import game.io.Reader;
 
 /**

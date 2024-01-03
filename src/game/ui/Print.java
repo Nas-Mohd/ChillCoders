@@ -209,8 +209,7 @@ public class Print {
     }
     
     public static void monsterStartCombat (Monster enemy) {
-        System.out.println("monsterStartCombat method invoked. playerhp: " + player.hp);
-        System.out.println(Game.progress);
+
         if (player.hp > 0 && enemy.hp > 0) {
             heading = enemy.getName();
             mainText = getPlayerCombatInfo();
@@ -260,7 +259,6 @@ public class Print {
         if (Game.progress.equalsIgnoreCase("Attacking")) {
             mainText = "You have HIT the " + enemy.name + " for " + value + " dmg";
             
-            System.out.println("ENEMY HP: " + enemy.hp); //TEST CODE
         }
         else if (Game.progress.equalsIgnoreCase("Defending")) {
             mainText = "You ready yourself to take the next hit, increasing your defense by " + value;
@@ -288,7 +286,6 @@ public class Print {
                 for (int i = 0; i < 3; i++)
                     if (Player.chosenMajor.availableSpells[i].type.equalsIgnoreCase("attack")){
                         mainText = "You CAST " + Player.chosenMajor.availableSpells[i].name + ". Damaging your opponent greatly. You have DEALT " + value + " dmg!";
-                        System.out.println("heard attack2");
                     }
                         
                 }            
@@ -313,7 +310,6 @@ public class Print {
         if (Game.progress.equals("Running Successful")){
         } else {
             Game.setProgress("Displaying Effects");
-            System.out.println("hi");
         }
         mainText = wrapWithHtml(mainText + enter);
 

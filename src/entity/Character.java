@@ -4,8 +4,6 @@
  */
 package entity;
 
-import java.awt.Rectangle;
-
 /**
  *
  * @author ikmal
