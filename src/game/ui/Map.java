@@ -18,7 +18,7 @@ import tile.Tile;
 
 /**
  *
- * @author ikmal
+ * @author ChillCoders Group
  */
 public class Map extends JPanel implements Runnable {
 

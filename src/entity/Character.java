@@ -6,7 +6,7 @@ package entity;
 
 /**
  *
- * @author ikmal
+ * @author ChillCoders Group
  */
 public class Character { 
 

@@ -18,7 +18,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author chris
+ * @author ChillCoders Group
  */
 public class Dragon extends Monster {
     public static BufferedImage img;

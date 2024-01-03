@@ -14,7 +14,7 @@ import java.util.Random;
 
 /**
  *
- * @author Anas Mohammad 23055727
+ * @author ChillCoders Group
  */
 public class Combat {
     static Game window;

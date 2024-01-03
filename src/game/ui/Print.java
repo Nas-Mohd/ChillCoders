@@ -21,7 +21,7 @@ import java.util.Random;
 
 /**
  *
- * @author Anas Mohammad 23055727
+ * @author ChillCoders Group
  */
 public class Print {
     static Game window;
@@ -444,7 +444,7 @@ public class Print {
                                 <span style='font-size:12pt;'><i> In partial fulfillment of WIX1002 Fundamentals of Programming</i></span>
                                 <pre style='font-size:18pt;'><b>Members:</b> Anas Mohammad
                                          Muhammad Ikhmal Izahan
-                                         Christine Leow Si Ting
+                                         ChillCoders Grouptine Leow Si Ting
                                          Saad Ahmed Pathan
                                          Raisha Haque
                                 

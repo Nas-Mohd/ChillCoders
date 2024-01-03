@@ -19,7 +19,7 @@ import javax.swing.text.Document;
 
 /**
  *
- * @author Anas Mohammad 23055727
+ * @author ChillCoders Group
  */
 class CommandLineInputHandler implements KeyListener {
     

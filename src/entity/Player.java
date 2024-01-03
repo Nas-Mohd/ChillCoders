@@ -16,7 +16,7 @@ import game.ui.Map;
 
 /**
  *
- * @author ikmal
+ * @author ChillCoders Group
  */
 public class Player extends Character {
 

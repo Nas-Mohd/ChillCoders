@@ -8,7 +8,7 @@ import game.io.Reader;
 
 /**
  *
- * @author Anas Mohammad 23055727
+ * @author ChillCoders Group
  */
 public class Spells {
     

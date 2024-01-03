@@ -31,7 +31,7 @@ import javax.swing.JTextPane;
 
 /**
  *
- * @author Anas Mohammad 23055727
+ * @author ChillCoders Group
  */
 public class Game {
 

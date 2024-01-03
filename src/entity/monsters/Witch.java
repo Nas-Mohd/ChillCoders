@@ -16,7 +16,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author chris
+ * @author ChillCoders Group
  */
 public class Witch extends Monster{
     public static BufferedImage img;

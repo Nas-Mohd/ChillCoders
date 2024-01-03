@@ -7,7 +7,7 @@ package game.engine;
 
 /**
  *
- * @author ikmal
+ * @author ChillCoders Group
  */
 public class Boundaries{
     

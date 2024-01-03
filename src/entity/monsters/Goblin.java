@@ -19,7 +19,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author Anas Mohammad 23055727
+ * @author ChillCoders Group
  */
 public final class Goblin extends Monster{
     

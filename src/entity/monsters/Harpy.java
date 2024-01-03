@@ -20,7 +20,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author chris
+ * @author ChillCoders Group
  */
 public class Harpy extends Monster{
     
