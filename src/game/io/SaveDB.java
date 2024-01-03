@@ -225,7 +225,7 @@ public class SaveDB {
 
     public static String[][] getSaveInfo() throws SQLException {
         List<String[]> saveInfoList = new ArrayList<>();
-        String[] header = {"#", "id", "Name", "Major", "Credits", "Monsters Killed"};
+        String[] header = {"#", "Name", "Major", "Credits", "Monsters Killed"};
         saveInfoList.add(header);
 
         try {
@@ -260,7 +260,6 @@ public class SaveDB {
                     loadFile[count-1][5] = Integer.toString(monstersKilled);              
                     String[] row = {
                         "<span style='color:lime;'>"+Integer.toString(count) + "</span>",
-                        Integer.toString(playerId),
                         playerName,
                         chosenMajor,
                         Integer.toString(credits),
