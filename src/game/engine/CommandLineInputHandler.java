@@ -83,7 +83,6 @@ class CommandLineInputHandler implements KeyListener {
 
                 checkInput();
         } catch (BadLocationException e) {
-            System.out.println("Error getRecentInput");
         }
         
         
@@ -156,6 +155,7 @@ class CommandLineInputHandler implements KeyListener {
             }
             case "Choosing" -> {
                 if (recentInput.equals("y")){
+                    SaveDB.insert = true;
                     Game.setProgress("Choosing Name");
                     window.chooseName();
                 }

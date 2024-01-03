@@ -273,7 +273,7 @@ public class Game {
     public void showMap() {
         
         map.setVisible(true);
-        SaveDB.saveGame();
+        SaveDB.autoSave();
         
     }
     

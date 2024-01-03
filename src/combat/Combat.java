@@ -81,15 +81,18 @@ public class Combat {
             }
              
             else if(enemy.hp < 1){
-                player.credits += enemy.credits;
                 enemy.isDead = true;
+                System.out.println("set dead");
+                player.credits += enemy.credits;
+                
                 enemy.despawn();
                 player.levelUp();
                 if (Game.gameWon()){
                     try {
+                        System.out.println(Game.p.id);
                         SaveDB.deletePlayerAndMonsters(Game.p.id);
                     } catch (SQLException ex) {
-                        System.out.println("SQL Exception");
+                        System.out.println("SQL Exception1");
                     }
                     Print.epilogue0(enemy);
                     
@@ -105,59 +108,42 @@ public class Combat {
     }
     
     public static void playerAttacks() {
-        int dmg, dif = player.attack - enemy.defense;
-        int x, y;
-        x = Math.abs(dif/2);
-        y = player.attack/2;
-        if (x==0)
-            x=1;
-        if (y==0)
-            y=1;
+        int dmg;
+        double x, y;
+        x = 0.8;
+        y = 1.2;
         Random rd = new Random();
+        double random = x + (y-x) * rd.nextDouble();
         Game.setProgress("Attacking");
-        if (dif <= 0) 
-            dmg = rd.nextInt(x) + rd.nextInt(y);  
-         else
-            dmg = dif + rd.nextInt(y/2, y);
-        
+        dmg = (int) ( (player.attack/10 + player.attack*random) - (enemy.defense*random));
+        dmg = Math.max(player.attack/10, dmg);
         enemy.hp -= dmg;
         
         Print.displayEffects(dmg);
     }
     
     public static void enemyAttacks() {
-        int dmg = 0, dif = enemy.attack - player.defense;
-        int x, y;
-        x = Math.abs(dif);
-        y = enemy.attack;
-        if (x==0)
-            x=1;
-        if (y==0)
-            y=1;
+        int dmg = 0;
+        double x, y;
+        x = 0.8;
+        y = 1.2;
+
         if (enemy.hp > 0){
            Random rd = new Random();
-            if (dif <= 0) {
-                dmg = rd.nextInt(y) - rd.nextInt(x);
-                if (dmg < 0)
-                    dmg = 0;
-            }
-            else
-                dmg = dif + rd.nextInt(y/2, y);
+           double random = x + (y - x) * rd.nextDouble();
+          
+            dmg = (int) ((enemy.attack / 10) + (enemy.attack *random) - (player.defense*random));
+            dmg = Math.max(enemy.attack/10, dmg);
         
             if (isBlocking) {
                 dmg = 0;
             }
             player.hp -= dmg;
-        
-        if (isDefending) {
-            isDefending = false;
-            player.defense = Player.chosenMajor.defense + Player.chosenMajor.defScaling*player.credits;
-        } 
+            if (isDefending) {
+                isDefending = false;
+                player.defense = Player.chosenMajor.defense + (int) (Player.chosenMajor.defScaling*player.credits);
+            } 
         }
-
-        
-            
-        
         Print.displayMonsterAction(dmg);
     }
     
@@ -194,7 +180,7 @@ public class Combat {
     
     public static void playerHeals() {
         int value, surplus;
-        int maxHP = Player.chosenMajor.hp + (Player.chosenMajor.hpScaling*player.credits);
+        int maxHP = Player.chosenMajor.hp + (int) (Player.chosenMajor.hpScaling*player.credits);
         value = (int) (0.2 * maxHP);
         
         player.hp += value;
@@ -203,7 +189,7 @@ public class Combat {
             player.hp -= surplus;
             value -= surplus;
         }
-        healCD = 4 + 1;
+        healCD = 3 + 1;
         Print.displayEffects(value);
     }
     
@@ -260,7 +246,7 @@ public class Combat {
             case "heal" -> {
                 Game.setProgress("Heal Spell");
                 spell.countdown = spell.cd + 1;
-                int maxHP = Player.chosenMajor.hp + (Player.chosenMajor.hpScaling*player.credits);
+                int maxHP = Player.chosenMajor.hp + (int) (Player.chosenMajor.hpScaling*player.credits);
                 int heal = (int) (maxHP * spell.multiplier);
                 player.hp += heal;
                 if (player.hp > maxHP){

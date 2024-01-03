@@ -1,9 +1,9 @@
 Goblin
-Goblins are small, pesky creatures that rely on sheer numbers to overpower their foes. They have no special abilities. <br> DIFFICULTY: <span style=' color: yellow;'>✮<b></span><span style=' color: gray;'>✮✮✮✮</b></span>
-50
-10
-5
+Goblins are small, pesky creatures that rely on sheer numbers to overpower their foes. They have no special abilities. <br> DIFFICULTY: <span style=' color: yellow;'>✮<b></span><span style=' color: gray;'>✮✮✮✮✮✮</b></span>
+20
 15
+3
+10
  has KICKED you in the face for 
  has pulled out a dagger and STABBED your big toe for 
  has clenched it's fist and PUNCHED you in the stomach for 
@@ -11,11 +11,11 @@ Goblins are small, pesky creatures that rely on sheer numbers to overpower their
 
 
 Skeleton
-Skeletons are reanimated undead, driven by malevolent intent. They have no unique abilities. <br> DIFFICULTY: <span style=' color: yellow;'>✮<b></span><span style=' color: gray;'>✮✮✮✮</b></span>
-60
-12
-3
-15
+Skeletons are reanimated undead, driven by malevolent intent. They have no unique abilities. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮<b></span><span style=' color: gray;'>✮✮✮✮✮</b></span>
+45
+20
+8
+10
  SWUNG its hard bony fists at you, grazing your arm with a bone-chilling strike for 
  THREW its own leg at you. Hitting you right on the head, dealing 
  lunged forward, BONKING you at the head with its bony arm, inflicting 
@@ -23,10 +23,10 @@ Skeletons are reanimated undead, driven by malevolent intent. They have no uniqu
 
 
 Witch
-Witches possess magical abilities, including the power to cast spells. Their main ability is to cast "Fireball," a potent fire-based magical attack. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮<b></span><span style=' color: gray;'>✮✮✮</b></span>
-150
-24
-30
+Witches possess magical abilities, including the power to cast spells. Their main ability is to cast "Fireball," a potent fire-based magical attack. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮<b></span><span style=' color: gray;'>✮✮✮✮</b></span>
+60
+38
+15
 20
  cackled ominously, CASTING a dark hex that drained 
  with a wicked laugh, the witch's CURSE weakened you, sapping 
@@ -35,10 +35,10 @@ Witches possess magical abilities, including the power to cast spells. Their mai
 
 
 Ogre
-Ogres are hulking, brutish creatures known for their raw strength and how they are like onions. They have no unique abilities, but also want you to get out of their swamp. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮<b></span><span style=' color: gray;'>✮✮</b></span>
-250
-30
-40
+Ogres are hulking, brutish creatures known for their raw strength and how they are like onions. They have no unique abilities, but also want you to get out of their swamp. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮✮✮<b></span><span style=' color: gray;'>✮✮</b></span>
+90
+48
+25
 20
  swung his green fist, delivering a HEAVY BLOW to your leg for 
  suddenly yelled "GET... OUT... OF ME SWAMP!", the ogre RAMMED its shoulder into you, causing 
@@ -47,10 +47,10 @@ Ogres are hulking, brutish creatures known for their raw strength and how they a
 
 
 Harpy
-Harpies are agile and cunning. They possess two abilities: "Talon Strike," a physical attack, and "Wind Gust," a magical attack that can disrupt opponents. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮<b></span><span style=' color: gray;'>✮✮</b></span>
-200
-55
-35
+Harpies are agile and cunning. They possess two abilities: "Talon Strike," a physical attack, and "Wind Gust," a magical attack that can disrupt opponents. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮✮<b></span><span style=' color: gray;'>✮✮✮</b></span>
+75
+56
+30
 20
  has swooped down, CLAWING your shoulder, leaving a trail of scratches for 
  with a piercing screech, the harpy's talons GRAZED your arm, causing a stinging pain for 
@@ -59,11 +59,11 @@ Harpies are agile and cunning. They possess two abilities: "Talon Strike," a phy
 
 
 Gnoll
-Gnolls are fierce humanoid creatures, combining the features of hyenas and humans. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮✮<b></span><span style=' color: gray;'>✮</b></span>
-450
-100
-85
+Gnolls are fierce humanoid creatures, combining the features of hyenas and humans. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮✮✮✮<b></span><span style=' color: gray;'>✮</b></span>
+120
+65
 35
+47
  pounced from the shadows, BITING your hand, causing 
  with swift ambush and CLAWED at your leg, dealing 
  lunged with ferocity, SINKING their teeth into your shoulder for  
@@ -71,11 +71,11 @@ Gnolls are fierce humanoid creatures, combining the features of hyenas and human
 
 
 Dragon
-Dragons are a colossal, reptilian creature with powerful wings, sharp claws, and the ability to breathe fire. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮✮✮<b></span><span style=' color: gray;'></b></span>
-2500
-250
-180
-3
+Dragons are a colossal, reptilian creature with powerful wings, sharp claws, and the ability to breathe fire. <br> DIFFICULTY: <span style=' color: yellow;'>✮✮✮✮✮✮✮<b></span><span style=' color: gray;'></b></span>
+200
+88
+65
+1
  breathed a searing blaze, SCORCHING you with intense flames for 
  with a mighty SWIPE, the dragon's claws left deep gashes in your side for  
  unleashed a thunderous roar, KNOCKING you back and dealing 

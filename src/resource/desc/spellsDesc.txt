@@ -4,21 +4,21 @@ Fire Wall
 Manifest a firewall, blocking incoming damage
 defend
 1.0
-30
+15
 4
 
 System Repair
 Troubleshoots your system and make repairs, healing you for 60% of your max hp
 heal
 0.6
-60
+45
 6
 
 World Wide Web
 Deploy the "InterNet", which ensares the opponent and reduces their stats by 30%
 status
 0.7
-90
+70
 6
 
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -28,21 +28,21 @@ Algorithmic Alchemy
 Creates an algorithmic potion, healing you for 30% of your max HP
 heal
 0.3
-30
+15
 5
 
 Defense Deployment
 Using your engineering skills, you deploy a shield to block your opponent's next attack
 defend
 1.0
-60
+45
 3
 
 Debug Swarm
 Launch an assault of debugging techniques, inflicting 300% of your attack as heavy damage
 attack
 3.0
-90
+70
 6
 
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -52,21 +52,21 @@ Audiovisual Blast
 Conjures a cacophany of bright lights and loud noises, damaging your enemy's senses, dealing 100% of your attack as damage.
 attack
 1.0
-30
+15
 4
 
 Chill LoFi Playlist
 You open up your "24/7 LoFi chillbeats playlist" through the power of multimedia computing, healing you for 50% of your max HP.
 heal
 0.5
-60
+45
 5
 
 Audiovisual Mastery
 Deploy a dazzling array of audio and visual elements, declining the target's combat power by 30%
 status
 0.7
-90
+70
 4
 
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -76,21 +76,21 @@ Algorithmic Efficiency
 You deploy a deep neural network to assist in battle, increasing your combat capabilities by 10%
 status
 1.1
-30
+15
 4
 
 Machine Learning
 Using the power of Machine Learning, you are able to predict your enemy's movements, weakening them by 10%
 status
 0.8
-60
+45
 3
 
 Shoot-GPT
 Channels quantum energy to distort reality, inflicting 200% of your attack as damage
 attack
 2.0
-90
+70
 6
 
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ Hierarchical Domain
 Establishes a system of hierarchy between you and your target, lowers target's combat capabilites by 20%
 status
 0.8
-30
+15
 5
 
 
@@ -108,12 +108,12 @@ Information Overload
 You send a powerful digital signal towards your opponent, dealing 100% of your attack as targeted damage
 attack
 1.0
-60
+45
 3
 
 Domain Expansion
 Further expands the system of hierarchy, putting yourself at the top, increases your capablities by 30%
 status
 1.3
-90
+70
 6

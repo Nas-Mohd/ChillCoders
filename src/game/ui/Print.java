@@ -235,7 +235,7 @@ public class Print {
         else
             info +="\n<span style='color: lime;'>2. Defend</span> - Reduce incoming damage once by increasing your defense (2 cd)";
         if (Combat.healCD > 0)
-            info +="\n<span style='color: red;'>3. Heal - "+ Combat.healCD + " / 4 (ON COOLDOWN)</span>";
+            info +="\n<span style='color: red;'>3. Heal - "+ Combat.healCD + " / 3 (ON COOLDOWN)</span>";
         else
             info += "\n<span style='color: lime;'>3. Heal</span> - Heal 20% of your Max HP (4 cd)";
         info += "\n<span style='color: lime;'>4. Run</span> - Leave combat (has a chance for failure)\n" + separator 
@@ -291,9 +291,9 @@ public class Print {
                 }            
         else if (Game.progress.equals("Status Spell")) {
                 for (int i = 0; i < 3; i++)
-                    if (Player.chosenMajor.availableSpells[i].type.equalsIgnoreCase("status") && Player.chosenMajor.availableSpells[i].multiplier < 1)
+                    if (Player.chosenMajor.availableSpells[i].type.equalsIgnoreCase("status") && value < 1)
                         mainText = "You CAST " + Player.chosenMajor.availableSpells[i].name + ". You lower your opponent's power and stats!";
-                    else if (Player.chosenMajor.availableSpells[i].type.equalsIgnoreCase("status") && Player.chosenMajor.availableSpells[i].multiplier > 1)
+                    else if (Player.chosenMajor.availableSpells[i].type.equalsIgnoreCase("status") && value > 0)
                         mainText = "You CAST " + Player.chosenMajor.availableSpells[i].name + ". You raise your own power! You are now stronger than before.";
                 }            
         else if (Game.progress.equals("Defend Spell")) {
@@ -340,8 +340,8 @@ public class Print {
     public static void levelUp(Monster enemy){
         heading = "Level Up!";
         mainText = "You have slain " + enemy.name + ". You retrieve what's rightfully yours and gain " + enemy.credits + " CREDITS.\n"
-                + "You start to feel more big brain. You gain +" + (enemy.credits*Player.chosenMajor.hpScaling) + " HP, +" + (enemy.credits*Player.chosenMajor.atkScaling) + " ATK, and +" + (enemy.credits*Player.chosenMajor.defScaling) + " DEF."
-                + "You are now one step closer to going back to your world and graduating, Yipee!! (◕‿◕)\n" +enter;
+                + "You restore all your hp and start to feel more big brain. You gain +" + (int) (enemy.credits*Player.chosenMajor.hpScaling) + " HP, +" + (int) (enemy.credits*Player.chosenMajor.atkScaling) + " ATK, and +" + (int)(enemy.credits*Player.chosenMajor.defScaling) + " DEF."
+                + "You are now one step closer to going back to your world and graduating. (◕‿◕)\n" +enter;
         textArt = Reader.getAsciiArt("credit");
         mainText = wrapWithHtml(mainText);
         
@@ -364,7 +364,7 @@ public class Print {
     public static void epilogue0(Monster enemy){
         heading = "Max Level Reached!";
         mainText = "You have slain " + enemy.name + ".\nYou retrieve what's rightfully yours and gain " + enemy.credits + " CREDITS.\n"
-                + "You have gotten back ALL of 182 Credits you needed to graduate. You gain +" + (enemy.credits*Player.chosenMajor.hpScaling) + " HP, +" + (enemy.credits*Player.chosenMajor.atkScaling) + " ATK, and +" + (enemy.credits*Player.chosenMajor.defScaling) + " DEF."
+                + "You have gotten back ALL of 182 Credits you needed to graduate. You gain +" + (int)(enemy.credits*Player.chosenMajor.hpScaling) + " HP, +" + (int)(enemy.credits*Player.chosenMajor.atkScaling) + " ATK, and +" + (int)(enemy.credits*Player.chosenMajor.defScaling) + " DEF."
                 + "You are now able to go back to your world and graduate, Yipee!! (◕‿◕)\n" +enter;
         textArt = Reader.getAsciiArt("credit");
         mainText = wrapWithHtml(mainText);

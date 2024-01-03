@@ -3,16 +3,16 @@ Software Engineering
 This Major utilizes the power of Creation and Logic to defend against powerful attacks and to counterattack at the right moment.
 Has High HP and decent attack.
 Spells:
-1. Algorithmic Alchemy (requires 30 credits) - HEALING SPELL
-2. Defense Deployment (requires 60 credits) - DEFENSE SPELL
-3. Debug Swarm (requires 90 credits) - ATTACK SPELL
+1. Algorithmic Alchemy (requires 15 credits) - HEALING SPELL
+2. Defense Deployment (requires 45 credits) - DEFENSE SPELL
+3. Debug Swarm (requires 70 credits) - ATTACK SPELL
 stats
 34
 8
 10
-5
+2.5
 1
-2
+0.5
 Algorithmic Alchemy
 Defense Deployment
 Debug Swarm
@@ -22,16 +22,16 @@ Artificial Intelligence
 This Major uses the power of Machine Learning and Algorithms to predict the enemy's weaknesses and actions.
 Has high attack but low defense.
 Spells:
-1. Algorithmic Efficiency (requires 30 credits) - BUFF SPELL
-2. Machine Learning (requires 60 credits) - DEBUFF SPELL
-3. Shoot-GPT(requires 90 credits) - ATTACK SPELL
+1. Algorithmic Efficiency (requires 15 credits) - BUFF SPELL
+2. Machine Learning (requires 45 credits) - DEBUFF SPELL
+3. Shoot-GPT(requires 70 credits) - ATTACK SPELL
 stats
 30
 12
 8
-3
-3
-1
+1.5
+1.5
+0.5
 Algorithmic Efficiency
 Machine Learning
 Shoot-GPT
@@ -42,16 +42,16 @@ Computer System & Network
 Specializes at being durable while slowly damaging the enemy.
 has high defense and hp.
 Spells:
-1. Fire Wall (requires 30 credits) - DEFENSE SPELL
-2. System Repair (requires 60 credits) - HEALING SPELL
-3. World Wide Web (requires 90 credits) - DEBUFF SPELL
+1. Fire Wall (requires 15 credits) - DEFENSE SPELL
+2. System Repair (requires 45 credits) - HEALING SPELL
+3. World Wide Web (requires 70 credits) - DEBUFF SPELL
 stats
 36
 12
 5
-5
-1
-2
+2.5
+0.5
+1.25
 Fire Wall
 System Repair
 World Wide Web
@@ -62,16 +62,16 @@ Multimedia Computing
 Uses the versatile power of audio, visuals, and the like to accomplish incredible feats.
 has good balance of attack, defense, and hp.
 Spells:
-1. Audiovisual Blast (requires 30 credits) - ATTACK SPELL
-2. Chill LoFi Playlist (requires 60 credits) - HEALING SPELL
-3. Audiovisual Mastery (requires 90 credits) - DEBUFF SPELL
+1. Audiovisual Blast (requires 15 credits) - ATTACK SPELL
+2. Chill LoFi Playlist (requires 45 credits) - HEALING SPELL
+3. Audiovisual Mastery (requires 75 credits) - DEBUFF SPELL
 stats
 22
 11
 11
-5
-2
-2
+2.5
+0.75
+0.75
 Audiovisual Blast
 Chill LoFi Playlist
 Audiovisual Mastery
@@ -81,16 +81,16 @@ Information Systems
 Has a mastery of Systems and Hierarchies. Specializes in weakening the enemy while strengthening themself.
 has low hp but high attack and defense.
 Spells:
-1. Hierarchical Domain (requires 30 credits) - DEBUFF SPELL
-2. Information Overload (requires 60 credits) - ATTACK SPELL
-3. Domain Expansion (requires 90 credits) - BUFF SPELL
+1. Hierarchical Domain (requires 15 credits) - DEBUFF SPELL
+2. Information Overload (requires 45 credits) - ATTACK SPELL
+3. Domain Expansion (requires 70 credits) - BUFF SPELL
 stats
 28
 10
 11
-2
-3
-3
+1
+1.5
+1.5
 Hierarchical Domain
 Information Overload
 Domain Expansion

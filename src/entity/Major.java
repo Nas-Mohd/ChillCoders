@@ -13,7 +13,8 @@ import game.io.Reader;
  */
 public class Major {
     public String name, ascii, desc, id;
-    public int hp, attack, defense, hpScaling, atkScaling, defScaling;
+    public int hp, attack, defense;
+    public double hpScaling, atkScaling, defScaling;
     public Spells[] availableSpells = new Spells[3];
     
     public Major (String s) {
@@ -31,9 +32,9 @@ public class Major {
         hp = Integer.parseInt(e[2]);
         attack = Integer.parseInt(e[3]);
         defense = Integer.parseInt(e[4]);
-        hpScaling = Integer.parseInt(e[5]);
-        atkScaling = Integer.parseInt(e[6]);
-        defScaling = Integer.parseInt(e[7]);
+        hpScaling = Double.parseDouble(e[5]);
+        atkScaling = Double.parseDouble(e[6]);
+        defScaling = Double.parseDouble(e[7]);
         availableSpells[0] = new Spells(e[8]);
         availableSpells[1] = new Spells(e[9]);
         availableSpells[2] = new Spells(e[10]);

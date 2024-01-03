@@ -177,9 +177,9 @@ public class Player extends Character {
         if (Game.isLoaded){
             chosenMajor = new Major(m);
             credits = Integer.parseInt(Game.playerInfo[4]);
-            hp = chosenMajor.hp + (chosenMajor.hpScaling * credits);
-            attack = chosenMajor.attack + (chosenMajor.atkScaling * credits);
-            defense = chosenMajor.defense + (chosenMajor.defScaling*credits);
+            hp = chosenMajor.hp + (int) (chosenMajor.hpScaling * credits);
+            attack = chosenMajor.attack + (int) (chosenMajor.atkScaling * credits);
+            defense = chosenMajor.defense + (int) (chosenMajor.defScaling*credits);
         } else{
             chosenMajor = new Major(m);
             hp = chosenMajor.hp;
@@ -192,9 +192,9 @@ public class Player extends Character {
 
     
    public void levelUp () {
-        hp = chosenMajor.hp + ( credits * chosenMajor.hpScaling );
-        attack = chosenMajor.attack + ( credits * chosenMajor.atkScaling );
-        defense = chosenMajor.defense + ( credits * chosenMajor.defScaling );
+        hp = chosenMajor.hp + (int) ( credits * chosenMajor.hpScaling );
+        attack = chosenMajor.attack + (int) ( credits * chosenMajor.atkScaling );
+        defense = chosenMajor.defense + (int) ( credits * chosenMajor.defScaling );
         
     }
    

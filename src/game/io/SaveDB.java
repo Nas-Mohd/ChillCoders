@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.logging.*;
 
 public class SaveDB {
-
+    public static boolean insert;
     private static final String URL = "jdbc:sqlite:src/resource/database/save.db";
     public static String[][] loadFile = new String[5][8];
 
@@ -35,10 +35,31 @@ public class SaveDB {
                 int currentSaveCount = getCurrentSaveCount(connection);
 
                 // Check if the maximum save limit has been reached
-                if (currentSaveCount >= 5) {
-                    // Delete the oldest save file (you need to implement this logic)
-                    deleteOldestSave(connection);
-                }
+                if (insert)
+                    while (currentSaveCount >= 5) {
+                        // Delete the oldest save file (
+                        deleteOldestSave(connection);
+                        currentSaveCount = getCurrentSaveCount(connection);
+                        insert = false;
+                    }
+
+                // Proceed with the save operation
+                
+                savePlayer(connection);
+                saveMonsters(connection);
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
+    }
+    public static void autoSave()  {
+        try {
+            Class.forName("org.sqlite.JDBC");
+
+            try ( Connection connection = DriverManager.getConnection(URL)) {
 
                 // Proceed with the save operation
                 
@@ -65,8 +86,7 @@ public class SaveDB {
     }
 
     private static void deleteOldestSave(Connection connection) throws SQLException {
-        // Implement logic to identify and delete the oldest save (e.g., based on date or ID)
-        // For simplicity, let's assume there's an "id" column that represents the order of saves
+        // Implement logic to identify and delete the oldest save 
 
         try (Statement statement = connection.createStatement()) {
 
@@ -146,7 +166,6 @@ public class SaveDB {
            );
 
            try (PreparedStatement statement = connection.prepareStatement(updateStatement)) {
-               // Assuming you have methods in Game to retrieve monster information
                statement.setInt(1, Game.getMonsterX(tableName));
                statement.setInt(2, Game.getMonsterY(tableName));
                statement.setInt(3, Game.isMonsterDead(tableName) ? 1 : 0);
@@ -162,7 +181,6 @@ public class SaveDB {
            );
 
            try (PreparedStatement statement = connection.prepareStatement(insertStatement)) {
-               // Assuming you have methods in Game to retrieve monster information
                statement.setInt(1, Game.p.id);
                statement.setInt(2, Game.getMonsterX(tableName));
                statement.setInt(3, Game.getMonsterY(tableName));
@@ -184,7 +202,7 @@ public class SaveDB {
         }
     }
     public static void deletePlayerAndMonsters( int playerId) throws SQLException {
-         Connection connection = DriverManager.getConnection("jdbc:sqlite:save.db");
+         Connection connection = DriverManager.getConnection(URL);
         // Delete rows from each monster table
         deleteRowsFromMonsterTable(connection, "harpy", playerId);
         deleteRowsFromMonsterTable(connection, "goblin", playerId);
@@ -209,7 +227,7 @@ public class SaveDB {
 
     private static void deleteRowFromPlayerTable(Connection connection, int playerId) throws SQLException {
         String deleteStatement = "DELETE FROM player WHERE id = ?";
-
+        System.out.println("deleted");
         try (PreparedStatement statement = connection.prepareStatement(deleteStatement)) {
             statement.setInt(1, playerId);
             statement.executeUpdate();
@@ -273,7 +291,6 @@ public class SaveDB {
    
 
     private static int getMonstersKilled(Connection connection, int playerId) throws SQLException {
-        // Assuming there are 7 types of monsters
 
         int monstersKilled = 0;
         for (String tableName : getMonsterTableNames()) {
