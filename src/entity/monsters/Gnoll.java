@@ -31,7 +31,7 @@ public class Gnoll extends Monster{
         id = "gnoll";
         gnollImage();      
         ascii = Reader.getAsciiArt(id);
-        name = "Smart Gnoll";
+        name = "Hungry Gnoll";
         getStats("Gnoll");
         gnollSpawn();
     

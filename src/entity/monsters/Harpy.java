@@ -36,7 +36,7 @@ public class Harpy extends Monster{
         id = "harpy";
         harpyImage();      
         ascii = Reader.getAsciiArt(id);
-        name = "Smart Harpy";
+        name = "Harpy";
         getStats("Harpy");
         harpySpawn();
     

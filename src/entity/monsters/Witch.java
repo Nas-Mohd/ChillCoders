@@ -31,7 +31,7 @@ public class Witch extends Monster{
         id = "witch";
         witchImage();      
         ascii = Reader.getAsciiArt(id);
-        name = "Smart Witch";
+        name = "Witch";
         getStats("Witch");
         witchSpawn();
     

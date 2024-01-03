@@ -33,7 +33,7 @@ public class Dragon extends Monster {
         id = "dragon";
         dragonImage();      
         ascii = Reader.getAsciiArt(id);
-        name = "Smart Dragon";
+        name = "Dragon";
         getStats("Dragon");
         dragonSpawn();
     

@@ -31,7 +31,7 @@ public class Skeleton extends Monster{
         id = "skeleton";
         skeletonImage();      
         ascii = Reader.getAsciiArt(id);
-        name = "Smart Skeleton";
+        name = "Weird Skeleton";
         getStats("Skeleton");
         skeletonSpawn();
     
