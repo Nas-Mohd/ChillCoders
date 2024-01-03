@@ -50,6 +50,7 @@ public class Game {
 
     Font cliFont = new Font ("Sylfaen", Font.PLAIN, 24);
     Font headingFont = new Font("Sylfaen", Font.BOLD, 52);
+    Dimension x = new Dimension(815, 800);
     Dimension a = new Dimension(500,500);
     Dimension b = new Dimension(225,450);
     CommandLineInputHandler titleScreenHandler;
@@ -76,7 +77,8 @@ public class Game {
     public Game(){
         System.out.println("Starting Game");
         window = new JFrame();
-        window.setSize(800, 800);
+        window.setSize(x);
+        window.setTitle("ChillCoder's Game");
         window.setLocationRelativeTo(null);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.black);
@@ -125,7 +127,7 @@ public class Game {
         
         
         
-        commandLinePanel.setBounds(0, 650, 800, 150);
+        commandLinePanel.setBounds(0, 650, 815, 150);
         commandLinePanel.setBackground(Color.black);
         commandLinePanel.setVisible(true);
         con.add(commandLinePanel);
@@ -133,7 +135,7 @@ public class Game {
         commandLine.setText("Press ENTER to start");
         commandLine.setCaretPosition(commandLine.getText().length());
         commandLine.setBackground(Color.black);
-        commandLine.setBounds(0, 650, 800, 150);
+        commandLine.setBounds(0, 650, 815, 150);
 
         commandLine.setForeground(Color.white);
         commandLine.setLineWrap(true);
