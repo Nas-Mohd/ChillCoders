@@ -354,7 +354,7 @@ public class Print {
         heading = "GAME OVER";
         window.headingLabel.setForeground(Color.red);
         window.textArtArea.setForeground(Color.red);
-        mainText = wrapWithHtml("Try again next time!");
+        mainText = wrapWithHtml("You have DIED<br>Try again next time!<br>Hit <b>ENTER</b> to go back to title screen.");
         textArt = Reader.getAsciiArt("lose");
         Game.setProgress("Game Lose");
         
@@ -444,7 +444,7 @@ public class Print {
                                 <span style='font-size:12pt;'><i> In partial fulfillment of WIX1002 Fundamentals of Programming</i></span>
                                 <pre style='font-size:18pt;'><b>Members:</b> Anas Mohammad
                                          Muhammad Ikhmal Izahan
-                                         ChillCoders Grouptine Leow Si Ting
+                                         Christine Leow Si Ting
                                          Saad Ahmed Pathan
                                          Raisha Haque
                                 
