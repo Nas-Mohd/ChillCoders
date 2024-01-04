@@ -440,21 +440,21 @@ public class Print {
     public static void credits(){
         heading = "CREDITS";
         mainText = wrapWithHtml("""
-                                <span style='font-size:24pt;'><b>Created by:</b> ChillCoders (▔▀ ‿ ▀ )ლ ▂▂⌇</span>
+                                <span style='font-family: Consolas, 'Courier New', Courier, monospace;font-size:24pt;'><b>Created by:</b> ChillCoders(▔▀ ‿ ▀ )ლ ▂▂⌇ </span>
                                 <span style='font-size:12pt;'><i> In partial fulfillment of WIX1002 Fundamentals of Programming</i></span>
                                 <pre style='font-size:18pt;'><b>Members:</b> Anas Mohammad
                                          Muhammad Ikhmal Izahan
                                          Christine Leow Si Ting
                                          Saad Ahmed Pathan
                                          Raisha Haque
-                                
                                 <b>Resources:</b> Google Images (for entity sprites)
                                            emojicombos.com (ASCII Art)
                                            Text-Image.com (Image to ASCII
                                            converter)
                                            RyiSnow Youtube Channel (Making a
-                                           game in Java playlist)</pre>
-                                <b>Special Thanks To:</b> (シ_ _ )シ .°˖✧<b>Chat-GPT</b>✧˖°. """ + enter);
+                                           game in Java playlist)
+                                           Chat-GPT (Coding direction and 
+                                           ideas)</pre>""" + enter);
         Game.setProgress("Credits");
         textArt = Reader.getAsciiArt("credits");
         
