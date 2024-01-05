@@ -23,10 +23,11 @@ public class Combat {
     public static boolean isDefending, isBlocking;
     public static int defendCD, healCD;
     
+    // Essentially used to make non-static methods of the Game class accessible
     public static void setWindow (Game e) {
         window = e;
     }
-    
+    // Method used to set the correct Monster enemy object before starting combat
     public static void initiateCombat(int monster, Player p) {
         
         String monsterName;
@@ -71,7 +72,7 @@ public class Combat {
         window.showStuff();
         Print.printMonsterEncounter(monsterName, enemy);
     }
-    
+    // Serves as the basis for combat, does the checking if combat should be finished or not.
     public static void startCombat() {
         if (player.hp > 0 && enemy.hp > 0)
         Print.monsterStartCombat(enemy);
@@ -106,7 +107,7 @@ public class Combat {
             }
                 
     }
-    
+    // Method for the basic attack action for the player
     public static void playerAttacks() {
         int dmg;
         double x, y;
@@ -121,7 +122,7 @@ public class Combat {
         
         Print.displayEffects(dmg);
     }
-    
+    // Method for the only action the enemy can do.
     public static void enemyAttacks() {
         int dmg = 0;
         double x, y;
@@ -146,7 +147,7 @@ public class Combat {
         }
         Print.displayMonsterAction(dmg);
     }
-    
+    // Method for discerning which action the user chose.
     public static void playerAction (String action) {
         switch (Game.progress) {
             case "Attacking" -> playerAttacks();
@@ -159,7 +160,7 @@ public class Combat {
         }
         
     }
-    
+    // Method for discerning the right spell the user chose
     public static void playerCastsSpell(String name){
         for (int i = 0; i < 3; i++){
             if (Player.chosenMajor.availableSpells[i].name.equalsIgnoreCase(name) || Character.toString('a' + i).equalsIgnoreCase(name)){
@@ -168,7 +169,7 @@ public class Combat {
         }
             
     }
-    
+    // Method for the basic defend action for the player
     public static void playerDefends() {
         int value = (int) (player.defense * 0.2);
         player.defense += value;
@@ -177,7 +178,7 @@ public class Combat {
             
         Print.displayEffects(value);
     }
-    
+    // Method for the basic heal action for the player
     public static void playerHeals() {
         int value, surplus;
         int maxHP = Player.chosenMajor.hp + (int) (Player.chosenMajor.hpScaling*player.credits);
@@ -192,7 +193,7 @@ public class Combat {
         healCD = 3 + 1;
         Print.displayEffects(value);
     }
-    
+    // Method for the basic running action for the player
     public static void playerRuns() {
         Random rd = new Random();
         if (rd.nextBoolean())
@@ -202,7 +203,7 @@ public class Combat {
         
         Print.displayEffects(0);
     }
-    
+    // Method for cooldown reduction after each round.
     public static void reduceCD() {
         if (defendCD > 0)
             defendCD--;
@@ -213,7 +214,7 @@ public class Combat {
                 Player.chosenMajor.availableSpells[i].countdown--;
                 
     }
-    
+    // Method for executing spell actions by the player.
     public static void castSpell(Spells spell) {
         switch (spell.type) {
             case "status" -> {

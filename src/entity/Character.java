@@ -9,7 +9,7 @@ package entity;
  * @author ChillCoders Group
  */
 public class Character { 
-
+    // Parent class to the Player class
     public int x = 0;
     public int y = 0;
     public int speed = 2;

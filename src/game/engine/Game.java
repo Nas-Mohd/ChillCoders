@@ -68,11 +68,12 @@ public class Game {
     /**
      * @param args the command line arguments
      */
+    // Main Method
     public static void main(String[] args) {
         
         new Game();
     }
-    
+    // Constructor
     public Game(){
         System.out.println("Starting Game");
         window = new JFrame();
@@ -102,7 +103,7 @@ public class Game {
         startGame();
         
     }
-    
+    // Starts the game, and displays the Title Screen
     public void startGame() {
 
         progress = "Start Game";
@@ -154,7 +155,7 @@ public class Game {
         Combat.setWindow(this);
         
     }
-    
+    // Displays the Menu Screen
     public void createMenuScreen(){
         progress = "Menu Screen";
         
@@ -215,7 +216,7 @@ public class Game {
         
         
     }
-    
+    // Displays the Choose Major Screen
     public void createCharacterScreen(){
         
         setProgress("Create Character");
@@ -226,24 +227,19 @@ public class Game {
 
         mainTextArea.setText(Print.getMajors());
         
-        
-        
-        
-        
     }
-    
+    // Intermediary method used to switch to the menu screen
     public void titleToMenuScreen() {
             titleGamePanel.setVisible(false);
             titleGameText.setVisible(false);
             createMenuScreen();
-        
-        
     }
+    // Creates an instance of the Player by initializing the map.
     public void createPlayer() {
         map = new Map();
                 
     }
-    
+    // Shows Map Screen and initializes monsters and spawns them. Also saves the game
     public void createMap() {
         Game.setProgress("Map");
         hideStuff();
@@ -265,24 +261,24 @@ public class Game {
         SaveDB.saveGame();
        
     }
-    
+    // Hides the map
     public void hideMap() {
         map.setVisible(false);
     }
-    
+    // Shows the map
     public void showMap() {
         
         map.setVisible(true);
         SaveDB.autoSave();
-        
     }
-    
+    // Hides all of the text UI
     public void hideStuff() {
         headingPanel.setVisible(false);
         textArtPanel.setVisible(false);
         commandLinePanel.setVisible(false);
         mainTextPanel.setVisible(false);
     }
+    // Shows all of the text UI
     public void showStuff() {
         headingPanel.setVisible(true);
         textArtPanel.setVisible(true);
@@ -291,11 +287,11 @@ public class Game {
         commandLine.requestFocus();
         commandLine.setCaretPosition(commandLine.getDocument().getLength());
     }
-    
+    // sets the game progress
     public static void setProgress(String s) {
         progress = s;
     }
-    
+    // sets the player and resets all the cd.
     public static void setPlayer(Player x) {
         p = x;
         p.setMajor(major);
@@ -306,26 +302,19 @@ public class Game {
         
         CommandLineInputHandler.setPlayer(x);
     }
-    
+    // sets the major
     public void setMajor (String s) {
         major = s;
     }
     
-    public void chooseName(){
-        headingLabel.setText("Please Enter a Name");
-        String nameText = """
-                          Type your character's name in the command line and hit ENTER
-                          Or just hit <b>ENTER</b> to go back""";
-        mainTextArea.setText(Print.wrapWithHtml(nameText));
-    }
-    
+    // Checks whether all monsters are dead, if yes then game is won.
     public static boolean gameWon(){
         boolean gameWon = false;
         if (goblin.isDead && harpy.isDead && skeleton.isDead && dragon.isDead && ogre.isDead && witch.isDead && gnoll.isDead)
             gameWon = true;
         return gameWon;
     }
-    
+    // Method for loading game
     public void loadGame(int x){
         isLoaded = true;
         playerInfo = SaveDB.loadFile[x];
@@ -335,7 +324,7 @@ public class Game {
         this.createPlayer();
         createMap();
     }
-    
+    // Returns the x value of a specific monster
     public static int getMonsterX(String name){
         int x = 0;
         switch (name){
@@ -350,6 +339,7 @@ public class Game {
         }
         return x;
     }
+    // Returns the y value of a specific monster
     public static int getMonsterY(String name){
         int y = 0;
         switch (name){
@@ -364,6 +354,7 @@ public class Game {
         }
         return y;
     }
+    // Returns whether specific monster is dead or not
     public static boolean isMonsterDead(String name){
         boolean y = false;
         switch (name){

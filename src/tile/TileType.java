@@ -9,6 +9,7 @@ import java.awt.image.BufferedImage;
 /**
  *
  * @author ChillCoders Group
+ * Essentially just used for Map
  */
 class Tiletype {
 

@@ -172,7 +172,7 @@ public class Player extends Character {
         name = s.toUpperCase();
     }
     
-    // set major/class
+    // sets major/archetype
     public void setMajor (String m) {
         if (Game.isLoaded){
             chosenMajor = new Major(m);
@@ -190,14 +190,14 @@ public class Player extends Character {
 
     }
 
-    
+    // increases stats with updated credit count
    public void levelUp () {
         hp = chosenMajor.hp + (int) ( credits * chosenMajor.hpScaling );
         attack = chosenMajor.attack + (int) ( credits * chosenMajor.atkScaling );
         defense = chosenMajor.defense + (int) ( credits * chosenMajor.defScaling );
         
     }
-   
+   // sets id for the instance of the player. used for saving game
    public void setId (int x){
        id = x;
    }

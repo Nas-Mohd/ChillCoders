@@ -27,7 +27,7 @@ public class Harpy extends Monster{
     public static BufferedImage img;
     public static boolean hasSpawned;
     
-    
+    // Constructor
     public Harpy(Game e, Map f) {
         hasSpawned = false;
         isDead = false;
@@ -43,7 +43,7 @@ public class Harpy extends Monster{
     }
     
 
-    
+    // Fetches the png file used for the map
     public void harpyImage() {
 
         try {
@@ -52,6 +52,7 @@ public class Harpy extends Monster{
             System.out.println("Problem with image");
         }
     }
+    // Spawns the monster
     public void harpySpawn(){
         if (Game.isLoaded){
             
@@ -71,7 +72,7 @@ public class Harpy extends Monster{
              
         } else {
             while (!hasSpawned) {
-              // Generate random coordinates for the skeleton's position
+              // Generate random coordinates for the position
                Random rd = new Random();
                X = rd.nextInt(40);
                Y = rd.nextInt(40);

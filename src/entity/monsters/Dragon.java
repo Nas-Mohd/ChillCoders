@@ -24,7 +24,7 @@ public class Dragon extends Monster {
     public static BufferedImage img;
     public static boolean hasSpawned;
     
-    
+    // Constructor
     public Dragon(Game e, Map f) {
         hasSpawned = false;
         isDead = false;
@@ -40,7 +40,7 @@ public class Dragon extends Monster {
     }
     
 
-    
+    // Fetches the png file used for map
     public void dragonImage() {
 
         try {
@@ -49,6 +49,7 @@ public class Dragon extends Monster {
             System.out.println("Problem with image");
         }
     }
+    // Spawns the monster
     public void dragonSpawn(){
         if (Game.isLoaded){
             
@@ -70,7 +71,7 @@ public class Dragon extends Monster {
              
         } else {
             while (!hasSpawned) {
-              // Generate random coordinates for the skeleton's position
+              // Generate random coordinates for  position
                Random rd = new Random();
                X = rd.nextInt(40);
                Y = rd.nextInt(40);

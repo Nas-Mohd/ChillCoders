@@ -22,7 +22,7 @@ public class Gnoll extends Monster{
     public static BufferedImage img;
     public static boolean hasSpawned;
     
-    
+    // Constructor
     public Gnoll(Game e, Map f) {
         hasSpawned = false;
         isDead = false;
@@ -38,7 +38,7 @@ public class Gnoll extends Monster{
     }
     
 
-    
+    // Fetches the png file used for the map
     public void gnollImage() {
 
         try {
@@ -47,6 +47,7 @@ public class Gnoll extends Monster{
             System.out.println("Problem with image");
         }
     }
+    // Spawns the monster
     public void gnollSpawn(){
         if (Game.isLoaded){
             
@@ -68,7 +69,7 @@ public class Gnoll extends Monster{
              
         } else {
             while (!hasSpawned) {
-              // Generate random coordinates for the skeleton's position
+              // Generate random coordinates for the position
                Random rd = new Random();
                X = rd.nextInt(40);
                Y = rd.nextInt(40);

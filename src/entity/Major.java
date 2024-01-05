@@ -16,14 +16,14 @@ public class Major {
     public int hp, attack, defense;
     public double hpScaling, atkScaling, defScaling;
     public Spells[] availableSpells = new Spells[3];
-    
+    // Constructor
     public Major (String s) {
-        ascii = Reader.getAsciiArt(s);
+        ascii = Reader.getAsciiArt(s); // Gets the appropriate ascii art to represent the major
         getStats(s);
         
         
     }
-    
+    // Method to assign the proper stats and spells with the string array returned by readMajorsFile() method.
     public void getStats (String majorName) {
         id = majorName;
         String[] e = Reader.readMajorsFile(majorName);

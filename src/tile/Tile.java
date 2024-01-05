@@ -43,6 +43,7 @@ public class Tile {
         }
     }//end tileimage method
 
+    // Renders the image for each case on the map
     public void draw(Graphics g, int[][] tilemap) {
 
         //draw the obstacle when tilemap is 0

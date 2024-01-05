@@ -10,7 +10,7 @@ package game.engine;
  * @author ChillCoders Group
  */
 public class Boundaries{
-    
+    // Checks for invalid/out-of-bounds movement.
     public void limitmovement(int x,int y, int speed,int width, int height) {
         if (x < 0) {
             speed = 0;

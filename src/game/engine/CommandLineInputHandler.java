@@ -23,16 +23,16 @@ import javax.swing.text.Document;
  */
 class CommandLineInputHandler implements KeyListener {
     
-    int press = 0;
     Game window;
     String recentInput;
     Document document;
     public static Player player;
-    
+    // Constructor
     public CommandLineInputHandler(Game a) {
         window = a;
         
     }
+    // Sets player
     public static void setPlayer(Player p) {
         player = p;
     }
@@ -40,30 +40,29 @@ class CommandLineInputHandler implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         
-        // Perform actions you want when Enter key is pressed
+        
         
     }
 
     @Override
     public void keyTyped(KeyEvent e) {
-        // Unused, but required by KeyListener interface
+       
         
         
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        // Unused, but required by KeyListener interface
+        // Runs when Enter key is released
         
         if (e.getKeyCode() == KeyEvent.VK_ENTER && e.getSource() == window.commandLine && window.commandLine.isFocusOwner()) {
-            press++;
             
             if (!Game.progress.equals("Map")) {
                 getRecentInput();
             }
             
             
-        
+            // sets command line text to default text after every press of Enter key
             window.commandLine.setText("> ");
             window.commandLine.setCaretPosition(window.commandLine.getText().length());
             window.commandLine.setPreferredSize(new Dimension(800, 100));
@@ -74,7 +73,7 @@ class CommandLineInputHandler implements KeyListener {
         
         
     }
-    
+    // Gets the user's latest input in the CL
     public void getRecentInput(){
         document = window.commandLine.getDocument();
         try {
@@ -87,7 +86,7 @@ class CommandLineInputHandler implements KeyListener {
         
         
     }
-    
+    // Method for checking recent input and valid inputs based on current game progress.
     public void checkInput(){
         switch (Game.progress){
             case "Start Game" -> window.titleToMenuScreen();
@@ -157,7 +156,7 @@ class CommandLineInputHandler implements KeyListener {
                 if (recentInput.equals("y")){
                     SaveDB.insert = true;
                     Game.setProgress("Choosing Name");
-                    window.chooseName();
+                    Print.chooseName(window);
                 }
                 else if (recentInput.equals("")){
                     Game.setProgress("Create Character");

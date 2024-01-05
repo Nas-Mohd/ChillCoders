@@ -13,9 +13,6 @@ import entity.Player;
 import game.engine.Game;
 import game.io.Reader;
 import java.awt.Color;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.SQLException;
 import java.util.Random;
 
@@ -28,17 +25,16 @@ public class Print {
     public static String heading;
     public static String mainText;
     public static String textArt;
-    static Goblin g;
     static Monster enemy;
     static Major chosenMajor;
     static Player player;
     static String separator = "+----------------------------------------------------+\n";
     static String enter = "<br><br>Hit <b>ENTER</b> to continue";
-    
+    // Makes Game object's instance variables and non static methods accessible.
     public static void setWindow(Game e){
         window = e;
     }
-    
+    // Returns formatted string of every available major
     public static String getMajors(){
         String majors = """
                         | Artificial Intelligence (<span style='color: lime;'>AI</span>)
@@ -49,11 +45,11 @@ public class Print {
         majors = wrapWithHtml(majors);
         return majors;
     }
-    
+    // Sets Player object
     public static void setPlayer(entity.Player p) {
         player = p;
     }
-    
+    // Displays Choose Major Screen
     public static void showMajors(){
         heading = "Choose Your Major";
         mainText = getMajors();
@@ -61,7 +57,7 @@ public class Print {
         
         printDisplay();       
     }
-    
+    // Displays Load Game Screen
     public static void showLoadGame() throws SQLException{
         Game.setProgress("Load Game");
         String[][] saveInfo = SaveDB.getSaveInfo();
@@ -72,7 +68,7 @@ public class Print {
         printDisplay();
         
     }
-    
+    // Displays Help 1/3
     public static void showHelp(){
         Game.setProgress("Help Screen");
         heading = "Controls";
@@ -95,6 +91,7 @@ public class Print {
         
         printDisplay();
     }
+    // Displays Help 3/3
     public static void showHelp2(){
         Game.setProgress("Help Screen2");
         heading = "Stats/Majors";
@@ -109,6 +106,7 @@ public class Print {
         
         printDisplay();
     }
+    // Displays Help 2/3
     public static void showHelp1(){
         Game.setProgress("Help Screen1");
         heading = "Save/Load System";
@@ -122,7 +120,7 @@ public class Print {
         
         printDisplay();
     }
-    
+    // Displays Specific Chosen Major's Information
     public static void showMajorsInfo(String s) {
 
             chosenMajor = new Major(s);
@@ -136,7 +134,7 @@ public class Print {
                 printDisplay();
         
     }
-    
+    // Displays Backstory 1/5
     public static void showStory1(){
         Game.setProgress("Story1");
         heading = "Backstory";
@@ -151,6 +149,7 @@ public class Print {
         
         printDisplay();
     }
+    // Displays Backstory 2/5
     public static void showStory2(){
         Game.setProgress("Story2");
         mainText = "Your reminiscing came to a stop when you heard your Mom yell \"Go get the car!\" to your Dad. It's your"
@@ -162,6 +161,7 @@ public class Print {
         
         printDisplay();
     }
+    // Displays Backstory 3/5
     public static void showStory3(){
         Game.setProgress("Story3");
         mainText = "A portal suddenly appeared in front of you and you get sucked in. For what seemed like an eternity, you fall through a void of nothingness and darkness until you hit solid ground.<br><br>"
@@ -172,6 +172,7 @@ public class Print {
         
         printDisplay();
     }
+    // Displays Backstory 4/5
     public static void showStory4(){
         Game.setProgress("Story4");
         mainText = wrapWithHtml("As the realization that you are no longer on Earth sets in, a cat suddenly magically teleports in front of you. The cat begins speaking to you,"
@@ -183,6 +184,7 @@ public class Print {
         
         printDisplay();
     }
+    // Displays Backstory 5/5
     public static void showStory(){
         Game.setProgress("Story");
         mainText = wrapWithHtml("After listening to everything <b>Joe Mama</b> said, <b>Joe Mama</b> suddenly levitated into the sky and disappeared from your view. you ready yourself to explore this world and defeat all <b>7 monsters</b> using the knowledge and skills "
@@ -191,14 +193,14 @@ public class Print {
         
         printDisplay();
     }
-    
+    // Updates the texts set to Main Text, ASCII, and Heading
     public static void printDisplay(){
         window.textArtArea.setText(textArt);
         window.mainTextArea.setText(mainText);
         window.headingLabel.setText(heading);
     }
     
-    
+    // Displays current monster encountered
     public static void printMonsterEncounter(String monsterName, Monster m){
         enemy = m;
         heading = monsterName.toUpperCase() + " ENCOUNTERED";
@@ -207,7 +209,7 @@ public class Print {
             textArt = Combat.enemy.getAscii();
         printDisplay();
     }
-    
+    // Displays Combat screen 1
     public static void monsterStartCombat (Monster enemy) {
 
         if (player.hp > 0 && enemy.hp > 0) {
@@ -218,7 +220,7 @@ public class Print {
         }
 
     }
-    
+    // Returns Player Info and available actions String
     public static String getPlayerCombatInfo() {
         String info;
         
@@ -254,7 +256,7 @@ public class Print {
         
         return info;
     }
-    
+    // Displays Action Effects
     public static void displayEffects (int value) {
         if (Game.progress.equalsIgnoreCase("Attacking")) {
             mainText = "You have HIT the " + enemy.name + " for " + value + " dmg";
@@ -316,7 +318,7 @@ public class Print {
             
         printDisplay();
     }
-    
+    // Displays Monster Action
     public static void displayMonsterAction(int value) {
         Random rd = new Random();
 
@@ -337,6 +339,7 @@ public class Print {
         Combat.reduceCD();
         printDisplay();
     }
+    // Displays Level Up Screen and stats gained
     public static void levelUp(Monster enemy){
         heading = "Level Up!";
         mainText = "You have slain " + enemy.name + ". You retrieve what's rightfully yours and gain " + enemy.credits + " CREDITS.\n"
@@ -349,7 +352,7 @@ public class Print {
         printDisplay();
     }
     
-    
+    // Displays Game Over Screen
     public static void gameLose() {
         heading = "GAME OVER";
         window.headingLabel.setForeground(Color.red);
@@ -361,6 +364,7 @@ public class Print {
         printDisplay();
                 
     }
+    // Displays Game Win Screen 1/6
     public static void epilogue0(Monster enemy){
         heading = "Max Level Reached!";
         mainText = "You have slain " + enemy.name + ".\nYou retrieve what's rightfully yours and gain " + enemy.credits + " CREDITS.\n"
@@ -370,10 +374,10 @@ public class Print {
         mainText = wrapWithHtml(mainText);
         Game.setProgress("Epilogue0");
         
-        
         printDisplay();
         
     }
+    // Displays Game Win Screen 2/6
     public static void epilogue1() {
         heading = "UNKNOWN ENCOUNTERED";
         mainText = wrapWithHtml("""
@@ -385,7 +389,7 @@ public class Print {
         
         printDisplay();
     }
-    
+    // Displays Game Win Screen 3/6
     public static void epilogue2(){
         heading = "JOE MAMA ENCOUNTERED";
         mainText = wrapWithHtml("""
@@ -399,7 +403,7 @@ public class Print {
         
         printDisplay();
     }
-    
+    // Displays Game Win Screen 4/6 yes input
     public static void epilogue3y(){
         heading = "Offer Accepted";
         window.headingLabel.setForeground(Color.green);
@@ -412,6 +416,7 @@ public class Print {
         
         printDisplay();
     }
+    // Displays Game Win Screen 4/6 no input
     public static void epilogue3n(){
         heading = "Offer Declined";
         window.headingLabel.setForeground(Color.red);
@@ -423,6 +428,7 @@ public class Print {
         
         printDisplay();
     }
+    // Displays Game Win Screen 5/6
     public static void epilogue4(){
         window.headingLabel.setForeground(Color.white);
         heading = "The End";
@@ -436,7 +442,7 @@ public class Print {
         
         printDisplay();
     }
-    
+    // Displays Game Win Screen 6/6; Credits Screen
     public static void credits(){
         heading = "CREDITS";
         mainText = wrapWithHtml("""
@@ -465,15 +471,16 @@ public class Print {
     
     
     
-    
+    // Method that takes a String input and wraps it with appropriate HTML tags for Main Text
     public static String wrapWithHtml(String text) {
         String htmlText = text.replace("\n", "<br>");
          return "<html><style type='text/css'>body { font-family: 'Sylfaen'; font-size: 20pt; color: white; }</style><body>" + htmlText + "</body></html>";
     }
+    // Method that takes a String input and wraps it with appropriate HTML tags for ASCII
     public static String ASCIIwrapWithHtml(String ASCIIart) {
          return "<html><style type='text/css'>body { font-family: 'Sylfaen'; font-size: 8pt; color: white; }</style><body><pre>" + ASCIIart + "</pre></body></html>";
     }
-    
+    // Creates HTML Table. Used for Load Game Screen
     private static String createHtmlTable(String[][] data) {
         StringBuilder htmlTable = new StringBuilder("<table>");
 
@@ -490,6 +497,12 @@ public class Print {
         htmlTable.append("</table>");
 
         return htmlTable.toString();
+    }
+    // Shows Choose Name Screen
+    public static void chooseName(Game game) {
+        game.headingLabel.setText("Please Enter a Name");
+        String nameText = "Type your character's name in the command line and hit ENTER\nOr just hit <b>ENTER</b> to go back";
+        game.mainTextArea.setText(Print.wrapWithHtml(nameText));
     }
 
 }

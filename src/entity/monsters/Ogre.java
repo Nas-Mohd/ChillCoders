@@ -22,7 +22,7 @@ public class Ogre extends Monster{
     public static BufferedImage img;
     public static boolean hasSpawned;
     
-    
+    // Constructor
     public Ogre(Game e, Map f) {
         hasSpawned = false;
         isDead = false;
@@ -38,7 +38,7 @@ public class Ogre extends Monster{
     }
     
 
-    
+    // Fetches the png file used for the map
     public void ogreImage() {
 
         try {
@@ -47,6 +47,7 @@ public class Ogre extends Monster{
             System.out.println("Problem with image");
         }
     }
+    // Spawns the monster
     public void ogreSpawn(){
         if (Game.isLoaded){
             
@@ -68,7 +69,7 @@ public class Ogre extends Monster{
              
         } else {
             while (!hasSpawned) {
-              // Generate random coordinates for the skeleton's position
+              // Generate random coordinates for the position
                Random rd = new Random();
                X = rd.nextInt(40);
                Y = rd.nextInt(40);

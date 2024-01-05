@@ -17,7 +17,7 @@ import java.util.Scanner;
  * @author ChillCoders Group
  */
 public class Reader {
-    
+    // Reads the monstersDesc.txt file. Parses through the txt file to look for specific monster stats
     public static String[] readMonsterFile(String monsterName) {
         String[] monsterDesc = new String[9];
         try {
@@ -40,7 +40,7 @@ public class Reader {
         
         return monsterDesc;
     }
-    
+    // Reads the majorsDesc.txt file. Parses through the txt file to look for specific major info
     public static String[] readMajorsFile (String name) {
         String[] majorDesc = new String[11];
         try {
@@ -69,7 +69,7 @@ public class Reader {
             }
         return majorDesc;
     }
-    
+    // Reads the spellsDesc.txt file. Parses through the txt file to look for specific spells info
     public static String[] readSpellsFile (String name) {
         String[] spellDesc = new String[5];
         try {
@@ -92,7 +92,7 @@ public class Reader {
             }
         return spellDesc;
     }
-    
+    // Reads the map.txt File. Returns a two-dimensional int array that represents the map.
     public static int[][] readMapFile(int x, int y){
         int[][] map = new int[x][y];
         try{
@@ -107,7 +107,7 @@ public class Reader {
                 
         return map;
     }
-
+    // Reads ascii art .txt files and returns them as strings wrapped with HTML tags.
     public static String getAsciiArt(String filename) {
         try {
             Print.textArt = String.join("\n", Files.readAllLines(Paths.get("src/resource/ascii/" + filename + "_ascii.txt")));

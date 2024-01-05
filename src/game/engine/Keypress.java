@@ -6,7 +6,7 @@ package game.engine;
 
 /**
  *
- * @author ikmal
+ * @author ChillCoders Group
  */
 import java.awt.event.*;
 
@@ -55,7 +55,7 @@ public class Keypress implements KeyListener {
             right = false;
         }
     }
-    
+    // Method to completely halt all ongoing movements
     public void stopMovement() {
         up = false;
         down = false;

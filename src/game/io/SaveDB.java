@@ -24,7 +24,7 @@ public class SaveDB {
         Logger.getLogger("").setLevel(Level.OFF);
     }
 
-
+    // Method for saving game
     public static void saveGame() {
         try {
             Class.forName("org.sqlite.JDBC");
@@ -55,13 +55,12 @@ public class SaveDB {
             ex.printStackTrace();
         }
     }
+    // Method for auto save. Does not have delete save file capability.
     public static void autoSave()  {
         try {
             Class.forName("org.sqlite.JDBC");
 
             try ( Connection connection = DriverManager.getConnection(URL)) {
-
-                // Proceed with the save operation
                 
                 savePlayer(connection);
                 saveMonsters(connection);
@@ -73,7 +72,7 @@ public class SaveDB {
             ex.printStackTrace();
         }
     }
-
+    // Returns number of save counts/rows in save.db player table
     private static int getCurrentSaveCount(Connection connection) throws SQLException {
         try (Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM player");
@@ -84,7 +83,7 @@ public class SaveDB {
             return 0;
         }
     }
-
+    // Method for deleting oldest save
     private static void deleteOldestSave(Connection connection) throws SQLException {
         // Implement logic to identify and delete the oldest save 
 
@@ -100,7 +99,7 @@ public class SaveDB {
             statement.executeUpdate("DELETE FROM player WHERE id = (SELECT MIN(id) FROM player)");
         }
     }
-
+    // Saves player instance
     private static void savePlayer(Connection connection) throws SQLException {
         if (Game.p.id == -1) {
             // Player ID not set, insert a new row
@@ -143,7 +142,7 @@ public class SaveDB {
             }
         
     
-
+    // Intermediary method to save all monsters
     private static void saveMonsters(Connection connection) throws SQLException {
         saveMonster(connection, "harpy");
         saveMonster(connection, "goblin");
@@ -153,7 +152,7 @@ public class SaveDB {
         saveMonster(connection, "dragon");
         saveMonster(connection, "witch");
     }
-
+    // Saves specific monster instance
     private static void saveMonster(Connection connection, String tableName) throws SQLException {
        // Check if the row with the specified ID exists
        boolean rowExists = rowExists(connection, tableName, Game.p.id);
@@ -190,7 +189,7 @@ public class SaveDB {
            }
        }
    }
-
+    // Checks whether row exists
     private static boolean rowExists(Connection connection, String tableName, int id) throws SQLException {
         String query = String.format("SELECT 1 FROM %s WHERE id = ?", tableName);
 
@@ -201,6 +200,7 @@ public class SaveDB {
             }
         }
     }
+    // Method to delete save. Invoked when game is won or when new save is inserted and player count is currently 5.
     public static void deletePlayerAndMonsters( int playerId) throws SQLException {
          Connection connection = DriverManager.getConnection(URL);
         // Delete rows from each monster table
@@ -215,7 +215,7 @@ public class SaveDB {
         // Delete row from the player table
         deleteRowFromPlayerTable(connection, playerId);
     }
-
+    // Deletes monster save
     private static void deleteRowsFromMonsterTable(Connection connection, String tableName, int playerId) throws SQLException {
         String deleteStatement = String.format("DELETE FROM %s WHERE id = ?", tableName);
 
@@ -224,7 +224,7 @@ public class SaveDB {
             statement.executeUpdate();
         }
     }
-
+    // Deletes player save
     private static void deleteRowFromPlayerTable(Connection connection, int playerId) throws SQLException {
         String deleteStatement = "DELETE FROM player WHERE id = ?";
         System.out.println("deleted");
@@ -233,7 +233,7 @@ public class SaveDB {
             statement.executeUpdate();
         }
     }
-
+    // Returns a two dimentional String array representing every save. Used for displaying save files in Load Game Screen
     public static String[][] getSaveInfo() throws SQLException {
         List<String[]> saveInfoList = new ArrayList<>();
         String[] header = {"#", "Name", "Major", "Credits", "Monsters Killed"};
@@ -289,7 +289,7 @@ public class SaveDB {
     }
 
    
-
+    // Checks how much monsters are isDead for a specific save
     private static int getMonstersKilled(Connection connection, int playerId) throws SQLException {
 
         int monstersKilled = 0;
@@ -308,12 +308,12 @@ public class SaveDB {
 
         return monstersKilled;
     }
-
+    // Just returns  the names of all monsters.
     private static List<String> getMonsterTableNames() {
         // Add the names of all monster tables
         return Arrays.asList("harpy", "goblin", "skeleton", "gnoll", "ogre", "dragon", "witch");
     }
-    
+    // Reads monster table from save.db file. Used for loading game
     public static String[] readMonsterTable(String monsterTableName) throws SQLException {
         String[] monsterInfo = new String[3]; // X, Y, isDead
         try (Connection connection = DriverManager.getConnection(URL)) {

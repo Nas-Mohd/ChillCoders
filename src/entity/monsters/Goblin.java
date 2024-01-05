@@ -13,8 +13,6 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
@@ -26,7 +24,7 @@ public final class Goblin extends Monster{
     public static BufferedImage img;
     public static boolean hasSpawned;
     
-    
+    // Constructor
     public Goblin(Game e, Map f) {
         hasSpawned = false;
         isDead = false;
@@ -42,7 +40,7 @@ public final class Goblin extends Monster{
     }
     
 
-    
+   // Fetches the png file used for the map
     public void goblinImage() {
 
         try {
@@ -52,6 +50,7 @@ public final class Goblin extends Monster{
         }
     
     }
+    // Spawns the monster
     public void goblinSpawn(){
         if (Game.isLoaded){
             try {
@@ -69,7 +68,7 @@ public final class Goblin extends Monster{
             }
         } else {
             while (!hasSpawned) {
-              // Generate random coordinates for the skeleton's position
+              // Generate random coordinates for the position
                Random rd = new Random();
                X = rd.nextInt(40);
                Y = rd.nextInt(40);
