@@ -49,7 +49,7 @@ public class Player extends Character {
     //reload image
     public void playerImage() {
         try {
-            img = ImageIO.read(getClass().getResourceAsStream("/resource/images/boy_down_1_1.png"));
+            img = ImageIO.read(getClass().getResourceAsStream("/resource/images/player.png"));
         } catch (IOException e) {
             System.out.println("Problem with image");
         }

@@ -37,7 +37,7 @@ public class Tile {
     public void tileImage() {
         try {
             tile[0] = new Tiletype();
-            tile[0].img = ImageIO.read(getClass().getResourceAsStream("/resource/images/tile_1.png"));
+            tile[0].img = ImageIO.read(getClass().getResourceAsStream("/resource/images/tile.png"));
         } catch (IOException e) {
             System.out.println("Problem with image");
         }
