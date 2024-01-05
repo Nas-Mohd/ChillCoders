@@ -1,7 +1,7 @@
 se
 Software Engineering
 This Major utilizes the power of Creation and Logic to defend against powerful attacks and to counterattack at the right moment.
-Has High HP and decent attack.
+Has high HP and decent ATTACK.
 Spells:
 1. Algorithmic Alchemy (requires 10 credits) - HEALING SPELL
 2. Defense Deployment (requires 45 credits) - DEFENSE SPELL
@@ -20,7 +20,7 @@ Debug Swarm
 ai
 Artificial Intelligence
 This Major uses the power of Machine Learning and Algorithms to predict the enemy's weaknesses and actions.
-Has high attack but low defense.
+Has high ATTACK but low DEFENSE.
 Spells:
 1. Algorithmic Efficiency (requires 10 credits) - BUFF SPELL
 2. Machine Learning (requires 30 credits) - DEBUFF SPELL
@@ -39,8 +39,8 @@ Shoot-GPT
 
 csn
 Computer System & Network
-Specializes at being durable while slowly damaging the enemy.
-has high defense and hp.
+Using the structure and integrity of Computers, CSN specializes at being durable while slowly damaging the enemy.
+Has high DEFENSE and HP.
 Spells:
 1. Fire Wall (requires 10 credits) - DEFENSE SPELL
 2. System Repair (requires 30 credits) - HEALING SPELL
@@ -60,7 +60,7 @@ World Wide Web
 mmc
 Multimedia Computing
 Uses the versatile power of audio, visuals, and the like to accomplish incredible feats.
-has good balance of attack, defense, and hp.
+Has good balance of ATTACK, DEFENSE, and HP.
 Spells:
 1. Audiovisual Blast (requires 10 credits) - ATTACK SPELL
 2. Chill LoFi Playlist (requires 30 credits) - HEALING SPELL
@@ -79,7 +79,7 @@ Audiovisual Mastery
 is
 Information Systems
 Has a mastery of Systems and Hierarchies. Specializes in weakening the enemy while strengthening themself.
-has low hp but high attack and defense.
+Has low HP but high ATTACK and DEFENSE.
 Spells:
 1. Hierarchical Domain (requires 10 credits) - DEBUFF SPELL
 2. Information Overload (requires 30 credits) - ATTACK SPELL
